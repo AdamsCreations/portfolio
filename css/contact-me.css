@@ -1,0 +1,46 @@
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    user-select: text;
+    -webkit-user-select: text;  /* Safari */
+    -moz-user-select: text;  /* Firefox */
+    -ms-user-select: text;  /* Internet Explorer/Edge */
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 600px;
+    background-color: whitesmoke;
+    border-radius: 12px;
+}
+
+.card-header{
+    color: gray;
+    margin-left: 10px;
+    user-select: none;
+    -webkit-user-select: none;  /* Safari */
+    -moz-user-select: none;  /* Firefox */
+    -ms-user-select: none;  /* Internet Explorer/Edge */
+}
+
+
+.card-text{
+    font-size: 25px;
+    color: gray;
+    margin-left: 60px;
+}
+
+@media  (max-width:413px) {
+    .card{
+        height: 300px;
+        width: 300px;
+    }
+
+    .card-text{
+        font-size: 18px;
+    }
+}
