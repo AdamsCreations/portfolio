@@ -60,106 +60,118 @@ body::-webkit-scrollbar {
   -moz-user-select: none;  /* Firefox */
   -ms-user-select: none;  /* Internet Explorer/Edge */
 }
+* {
+  box-sizing: border-box;
+}
 
-*{
-    box-sizing: border-box;
-  }
-  .next-arrow{
-    cursor: pointer;
-    position:absolute;
-    position: fixed;
-    display:block;
-    margin: 0;
-    padding: 0;
-    right: 1%;
-    top: 50%;
-    width:100px;
-    height: 100px;
-    border: solid 6px whitesmoke;
-    border-radius: 100%;
-    z-index: 1;
-    transition: all .2s linear;
+.next-arrow {
+  cursor: pointer;
+  position: fixed; /* Use only fixed positioning here */
+  display: block;
+  margin: 0;
+  padding: 0;
+  right: 1%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  border: solid 6px whitesmoke;
+  border-radius: 100%;
+  z-index: 1;
+  transition: all .2s linear;
+}
 
-    &:before, &:after{
-      content:"";
-      position: absolute;
-      width:35%;
-      height: 10%;
-      top:41%;
-      left:55%;
-      background: whitesmoke;
-      z-index: 2;
-      transform: translate(-50%, -50%) rotate(45deg);
-      transition: all .2s linear;
-    }
-    &:after{
-      z-index: 3;
-      top:59%;
-      left:55%;
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    &:hover{
-      border: solid 8px whitesmoke;
-      &:after, &:before{
-        background: whitesmoke;
-      }
-    }
-    &:active{
-      border: solid 8px whitesmoke;
-      &:after, &:before{
-        background: whitesmoke;
-      }
-    }
-  }
+.next-arrow:before,
+.next-arrow:after {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 10%;
+  top: 41%;
+  left: 55%;
+  background: whitesmoke;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all .2s linear;
+}
 
-  .back-arrow{
-    cursor: pointer;
-    position:absolute;
-    position: fixed;
-    display:block;
-    margin: 0;
-    padding: 0;
-    top: 50%;
-    left: 1%;
-    width:100px;
-    height: 100px;
-    border: solid 6px whitesmoke;
-    border-radius: 100%;
-    z-index: 1;
-    transition: all .2s linear;
-    transform: scaleX(-1);
+.next-arrow:after {
+  top: 59%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 3;
+}
 
-    &:before, &:after{
-      content:"";
-      position: absolute;
-      width:35%;
-      height: 10%;
-      top:41%;
-      left:55%;
-      background: whitesmoke;
-      z-index: 2;
-      transform: translate(-50%, -50%) rotate(45deg);
-      transition: all .2s linear;
-    }
-    &:after{
-      z-index: 3;
-      top:59%;
-      left:55%;
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
-    &:hover{
-      border: solid 8px whitesmoke;
-      &:after, &:before{
-        background: whitesmoke;
-      }
-    }
-    &:active{
-      border: solid 8px whitesmoke;
-      &:after, &:before{
-        background: whitesmoke;
-      }
-    }
-  }
+.next-arrow:hover {
+  border: solid 8px whitesmoke;
+}
+
+.next-arrow:hover:before,
+.next-arrow:hover:after {
+  background: whitesmoke;
+}
+
+.next-arrow:active {
+  border: solid 8px whitesmoke;
+}
+
+.next-arrow:active:before,
+.next-arrow:active:after {
+  background: whitesmoke;
+}
+
+.back-arrow {
+  cursor: pointer;
+  position: fixed; /* Use only fixed positioning here */
+  display: block;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 1%;
+  width: 100px;
+  height: 100px;
+  border: solid 6px whitesmoke;
+  border-radius: 100%;
+  z-index: 1;
+  transition: all .2s linear;
+  transform: scaleX(-1); /* Flips the arrow horizontally */
+}
+
+.back-arrow:before,
+.back-arrow:after {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 10%;
+  top: 41%;
+  left: 55%;
+  background: whitesmoke;
+  z-index: 2;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: all .2s linear;
+}
+
+.back-arrow:after {
+  top: 59%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  z-index: 3;
+}
+
+.back-arrow:hover {
+  border: solid 8px whitesmoke;
+}
+
+.back-arrow:hover:before,
+.back-arrow:hover:after {
+  background: whitesmoke;
+}
+
+.back-arrow:active {
+  border: solid 8px whitesmoke;
+}
+
+.back-arrow:active:before,
+.back-arrow:active:after {
+  background: whitesmoke;
+}
 
   @media (min-width: 319px) and (max-width: 660px) {
     html{

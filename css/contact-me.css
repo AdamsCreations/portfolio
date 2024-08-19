@@ -35,6 +35,9 @@
 }
 
 @media  (max-width:413px) {
+    .card-text{
+        margin-left: 10px;
+    }
     .card{
         height: 300px;
         width: 300px;
